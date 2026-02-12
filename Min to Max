@@ -1,0 +1,26 @@
+class Solution {
+    public int countNonMinimum(int[] nums) {
+        // write your code here 
+        
+        int n = nums.length;
+        
+        int mini = nums[0];
+        int operations = 0;
+        
+        for(int i = 1; i < n; i++){
+            if(nums[i] <= mini){
+                mini = nums[i];
+            }
+        }
+        
+        for(int i = 0; i < n; i++){
+            if(nums[i] > mini ){
+                nums[i] = mini;
+                operations++;
+            }
+        }
+        
+        return operations;
+        
+    }
+}
