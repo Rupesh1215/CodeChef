@@ -1,0 +1,38 @@
+    public static void main(String[] args) {
+       //code here...
+       
+       Scanner s = new Scanner(System.in);
+       int n = s.nextInt();
+       int[] a = new int[n];
+       
+       for(int i = 0; i < n; i++){
+           a[i] = s.nextInt();
+       }
+       
+       int[] positive = new int[n/2];
+       int[] negative = new int[n/2];
+       int p = 0;
+       int neg = 0;
+       
+       for(int i = 0; i < n; i++){
+           
+           if(a[i] < 0){
+               negative[neg++] = a[i];
+           }
+           else{
+               positive[p++] = a[i];
+           }
+       }
+       
+       int k = 0;
+       int pos = 0;
+       int ne = 0;
+        while(k < n){
+            a[k++] = positive[pos++];
+            a[k++] = negative[ne++];
+            
+        }
+       for(int i = 0; i < n; i++){
+           System.out.println(a[i]);
+       }
+    }
