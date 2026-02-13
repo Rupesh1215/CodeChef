@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        int testCases = s.nextInt();
+        
+        while(testCases-- > 0){
+            
+            int n = s.nextInt();
+            int[] a = new int[n];
+            
+            for(int i = 0; i < n; i++){
+                a[i] = s.nextInt();
+            }
+            
+            if(n == 0){
+                System.out.println(0);
+                continue;
+            }
+            
+            int frames = 1;
+            
+            for(int k = 1; k < n; k++){
+                if(a[k] != a[k-1]){
+                    frames++;
+                }
+            }
+            
+            System.out.println(frames);
+        }
+        
+    }
+}
