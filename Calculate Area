@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Take length and width as input
+        Scanner s = new Scanner(System.in);
+        int length = s.nextInt();
+        int width = s.nextInt();
+        
+        int area = calculateArea(length, width);
+        System.out.println(area);    
+    }
+    
+    public static int calculateArea(int length, int width) {
+        // Complete this method
+        int area = length * width;
+        
+        return area;
+        
+    }
+}
