@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    int z = s.nextInt();
+		    
+		    boolean a = (y>=x || z>= x);
+		    boolean b = (x<=y ||z<=y);
+		    boolean c = (x>=z || y>=z);
+		    
+		    if(a&&b&&c){
+		        System.out.println("YES");
+		    }
+		    else{
+		        System.out.println("NO");
+		    }
+		}
+
+	}
+}
