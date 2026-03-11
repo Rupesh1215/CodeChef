@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    int z = s.nextInt();
+		    
+		    int min = y/x;
+		    int ans = 0;
+		    
+		    if(z != 1){
+		        ans = z - min;
+		    }
+		    
+		    if(ans < 0){
+		        System.out.println(0);
+		    }
+		    else{
+		        System.out.println(ans);
+		    }
+		}
+
+	}
+}
