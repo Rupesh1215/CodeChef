@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            int x = s.nextInt();
+            int y = s.nextInt();
+            int z = s.nextInt();
+            int br = 0;
+            
+            if(x > 3){
+                if(x%3 == 0){
+                    br = (x/3)-1;
+                }
+                else{
+                    br = x/3;
+                }
+            }
+            
+            int ans = (x*y)+(br*z);
+            System.out.println(ans);
+        }
+	}
+}
