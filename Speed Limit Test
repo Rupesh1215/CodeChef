@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            int a = s.nextInt();
+            double x = s.nextDouble();
+            int b = s.nextInt();
+            double y = s.nextDouble();
+            double p = a/x;
+            double q = b/y;
+            
+            if(p<q){
+                System.out.println("Bob");
+            }
+            else if(p>q){
+                System.out.println("Alice");
+            }
+            else{
+                System.out.println("Equal");
+            }
+        }
+	}
+}
