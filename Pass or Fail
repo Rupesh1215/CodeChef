@@ -1,0 +1,42 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            int n = s.nextInt();
+            int x = s.nextInt();
+            int p = s.nextInt();
+            
+            int marks = exam(n,x,p);
+            if(marks==1){
+                System.out.println("PASS");
+            }
+            else{
+                System.out.println("FAIL");
+            }
+        }
+	}
+	
+	public static int exam(int n, int x, int p){
+	    if(x == 0){
+	        return 0;
+	    }
+	    else{
+	        int marks = (x*3) - (n-x);
+	        if(marks >= p){
+	            return 1;
+	        }
+	        else{
+	            return 0;
+	        }
+	    }
+	}
+}
