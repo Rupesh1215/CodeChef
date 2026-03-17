@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int a = s.nextInt();
+		    int b = s.nextInt();
+		    int k = s.nextInt();
+		    int count = 0;
+		    int sum = a;
+		    
+		    if(a < b){
+		        while(sum < b){
+		            sum = sum+k;
+		            count++;
+		        }
+		    }
+		    else{
+		        while(sum > b){
+		            sum = sum - k;
+		            count++;
+		        }
+		    }
+		    System.out.println(count);
+		}
+
+	}
+}
