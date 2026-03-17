@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int tc = sc.nextInt();
+		sc.nextLine();
+		while(tc-- > 0){
+		    StringBuilder str = new StringBuilder();
+		    String s = sc.nextLine();
+		    String t = sc.nextLine();
+		    
+		    for(int i = 0; i < s.length(); i++){
+		        char first = s.charAt(i);
+		        char second = t.charAt(i);
+		        
+		        if(first == second){
+		            str.append('G');
+		        }
+		        else{
+		            str.append('B');
+		        }
+		    }
+		    
+		    System.out.println(str.toString());
+		}
+	}
+}
