@@ -1,0 +1,26 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner s = new Scanner(System.in);
+	    int t = s.nextInt();
+	    
+	    while(t-- > 0){
+	        int x = s.nextInt();
+	        BigInteger fact = BigInteger.ONE;
+	        
+	        for(int i = 2; i<=x; i++){
+	            fact = fact.multiply(BigInteger.valueOf(i));
+	        }
+	        
+	        System.out.println(fact);
+	    }
+	    
+
+	}
+}
