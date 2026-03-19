@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		long c1 = 0;
+		long c2 = 0;
+		long m1Lead = 0;
+	    long m2Lead = 0;
+		
+		for(long i = 0; i < n; i++){
+		    long v1 = s.nextInt();
+		    long v2 = s.nextInt();
+		    
+		    c1 += v1;
+		    c2 += v2;
+		    
+		    if(v1 > v2){
+		     m1Lead = Math.max(m1Lead,c1-c2);
+		    }
+		    else if(v2 > v1){
+		        m2Lead = Math.max(m2Lead, c2-c1);
+		    }
+		}
+		
+		if(m1Lead > m2Lead){
+		    System.out.println("1 "+m1Lead);
+		}
+		else{
+		    System.out.println("2 "+m2Lead);
+		}
+
+	}
+}
