@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int n = s.nextInt();
+		    int st = 0;
+		    int lt = 0;
+		    
+		    for(int i=0; i<n; i++){
+		        String str = s.next();
+		        if(str.equals("START38")){
+		            st++;
+		        }
+		        else if(str.equals("LTIME108")){
+		            lt++;
+		        }
+		    }
+		    
+		    System.out.println(st+" "+lt);
+		}
+
+	}
+}
