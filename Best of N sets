@@ -1,0 +1,38 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int a = s.nextInt();
+		    int b = s.nextInt();
+		    
+		    int setsPlayed = a+b;
+		    int playableSets = 0;
+		    int ans = 0;
+		    
+		    while(playableSets+Math.min(a,b) < Math.max(a,b)){
+		        
+		        if(setsPlayed % 2 ==0 ){
+		            setsPlayed++;
+		        }
+		        
+		        playableSets = setsPlayed - (a+b);
+		        if(Math.min(a,b)+playableSets < Math.max(a,b)){
+		            ans = Math.max(ans,setsPlayed);
+		            setsPlayed += 2;
+		        }
+		    }
+		    
+		    System.out.println(ans);
+		}
+		
+
+	}
+}
