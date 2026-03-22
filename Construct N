@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-- > 0){
+		    int n = s.nextInt();
+		    boolean value = false;
+		    
+		    for(int y = 0; y <= n/7; y++){
+		        if((n-7*y) % 2 == 0){
+		            value = true;
+		            break;
+		        }
+		    }
+		    
+		    System.out.println(value? "YES": "NO");
+		}
+
+	}
+}
