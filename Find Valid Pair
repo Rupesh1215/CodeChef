@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int arr[] = new int[n*2];
+        
+        for(int i=0; i<arr.length; i+=2){
+            arr[i] = s.nextInt();
+            arr[i+1] = s.nextInt();
+        }
+        
+        int left = s.nextInt();
+        int right = s.nextInt();
+        
+        for(int i=0; i<arr.length; i+=2){
+            int sum = arr[i]+arr[i+1];
+            int prod = arr[i]*arr[i+1];
+            
+            if((sum >= left && sum <= right) && (prod >= left && prod <= right) ){
+                System.out.println(arr[i]+" "+arr[i+1]);
+            }
+        }
+	}
+}
