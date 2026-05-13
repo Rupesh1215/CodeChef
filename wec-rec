@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            int n = s.nextInt();
+            int x = s.nextInt();
+            int k = s.nextInt();
+            
+            HashMap<Integer, Integer> map = new HashMap<>();
+            
+            for(int i=0; i<n; i++){
+                int score = s.nextInt();
+                
+                map.put(score,map.getOrDefault(score,0)+1);
+            }
+            
+            List<Integer> scores = new ArrayList<>(map.keySet());
+            
+            Collections.sort(scores, Collections.reverseOrder());
+            
+            int eligible = 0;
+            
+            for(int i=0; i < Math.min(k,scores.size()); i++){
+                eligible += map.get(scores.get(i)); 
+            }
+            
+            System.out.println(Math.min(eligible,x));
+        }
+	}
+}
