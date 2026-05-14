@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        
+        while(t-- > 0){
+            char[] str = new char[3];
+            for(int i=0; i < 3; i++) str[i] = s.next().charAt(0);
+            
+            char firstOffer = s.next().charAt(0);
+            char secondOffer = s.next().charAt(0);
+            
+            for(int i = 0; i < 3; i++){
+                if(str[i] == firstOffer || str[i] == secondOffer){
+                    System.out.println(str[i]);
+                    break;
+                }
+            }
+        }
+	}
+}
